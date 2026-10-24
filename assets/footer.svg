@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130">
+  <defs>
+    <linearGradient id="wgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#34d399"/>
+      <animate attributeName="x1" values="0%;25%;0%" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;125%;100%" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <style>
+      .drift1 { animation: driftx 7s ease-in-out infinite; }
+      .drift2 { animation: driftx 11s ease-in-out infinite reverse; }
+      @keyframes driftx { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-36px); } }
+    </style>
+  </defs>
+  <rect width="1200" height="130" fill="#04202b"/>
+  <g class="drift1" opacity=".5">
+    <path d="M -40 96 Q 100 62 240 96 T 520 96 T 800 96 T 1080 96 T 1360 96 L 1360 130 L -40 130 Z" fill="url(#wgrad)"/>
+  </g>
+  <g class="drift2" opacity=".35">
+    <path d="M -40 110 Q 120 84 280 110 T 600 110 T 920 110 T 1240 110 L 1240 130 L -40 130 Z" fill="#2dd4bf"/>
+  </g>
+  <text x="600" y="52" text-anchor="middle" font-family="Verdana, sans-serif" font-size="26" font-weight="bold" fill="#e6fbff">drift-cli</text>
+  <text x="600" y="82" text-anchor="middle" font-family="Verdana, sans-serif" font-size="16" fill="#8fb8c4">if it changed, you'll know — watch · snapshot · check · report</text>
+</svg>

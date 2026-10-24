@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#34d399"/>
+      <animate attributeName="x1" values="0%;30%;0%" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;130%;100%" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="glowC" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowE" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#34d399" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .pulse { animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+  <rect width="1200" height="340" fill="#04202b"/>
+  <circle cx="180" cy="160" r="200" fill="url(#glowC)"/>
+  <circle cx="1070" cy="52" r="150" fill="url(#glowE)" opacity=".7"/>
+  <g fill="#67e8f9">
+    <circle cx="440" cy="60" r="3"><animate attributeName="cy" values="60;44;60" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;.3;.9" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="670" cy="40" r="2.4"><animate attributeName="cy" values="40;58;40" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;.95;.4" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="920" cy="84" r="3"><animate attributeName="cy" values="84;66;84" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;.35;.8" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="555" cy="112" r="2"><animate attributeName="cy" values="112;96;112" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;.3;.7" dur="4.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- two pages drifting apart: yesterday vs today -->
+  <g>
+    <rect x="88" y="66" width="180" height="220" rx="12" fill="#07303f" stroke="#155e6b" stroke-width="2"/>
+    <rect x="128" y="92" width="196" height="220" rx="12" fill="#0a3547" stroke="url(#grad)" stroke-width="2.5"/>
+    <g stroke-linecap="round" stroke-width="9">
+      <line x1="152" y1="126" x2="272" y2="126" stroke="#7dd3e8"/>
+      <line x1="152" y1="158" x2="300" y2="158" stroke="#3f7d8c"/>
+      <line x1="152" y1="190" x2="238" y2="190" stroke="#f87171"/>
+      <line x1="152" y1="222" x2="284" y2="222" stroke="#34d399"/>
+      <line x1="152" y1="254" x2="258" y2="254" stroke="#3f7d8c"/>
+    </g>
+    <text x="140" y="197" font-family="Verdana, sans-serif" font-size="17" font-weight="bold" fill="#f87171">−</text>
+    <text x="140" y="229" font-family="Verdana, sans-serif" font-size="17" font-weight="bold" fill="#34d399">+</text>
+    <line x1="134" y1="104" x2="318" y2="104" stroke="#22d3ee" stroke-width="3" class="pulse">
+      <animate attributeName="y1" values="104;300;104" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="104;300;104" dur="6s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  <text x="392" y="140" font-family="Verdana, sans-serif" font-size="72" font-weight="bold" fill="url(#grad)">drift-cli</text>
+  <text x="395" y="192" font-family="Verdana, sans-serif" font-size="27" fill="#e6fbff">Memory for the web. Built for agents.</text>
+  <text x="395" y="240" font-family="Verdana, sans-serif" font-size="19" fill="#8fb8c4">watch · snapshot · check · drift-report.md — CHANGED or NO CHANGE</text>
+  <g font-family="Verdana, sans-serif" font-size="16">
+    <rect x="395" y="268" rx="14" width="150" height="30" fill="none" stroke="#22d3ee"/>
+    <text x="470" y="289" fill="#a5f3fc" text-anchor="middle">CLI + MCP + Skill</text>
+    <rect x="561" y="268" rx="14" width="132" height="30" fill="none" stroke="#34d399"/>
+    <text x="627" y="289" fill="#a7f3d0" text-anchor="middle">stdlib only</text>
+    <rect x="709" y="268" rx="14" width="118" height="30" fill="none" stroke="#2dd4bf"/>
+    <text x="768" y="289" fill="#99f6e4" text-anchor="middle">MIT open source</text>
+  </g>
+</svg>

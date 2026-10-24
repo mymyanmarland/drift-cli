@@ -1,0 +1,4 @@
+error: fetch failed for https://keyscope.funapp.live: truncated body (16139 of 30448 bytes) — the site's edge closed the connection early
+watch exit: 2
+error: not watched: https://keyscope.funapp.live (run `drift watch https://keyscope.funapp.live` first)
+check exit: 2

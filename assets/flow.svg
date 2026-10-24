@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230">
+  <defs>
+    <linearGradient id="fgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <style>
+      .dash { stroke-dasharray: 8 7; animation: march 1.4s linear infinite; }
+      @keyframes march { to { stroke-dashoffset: -15; } }
+      .box { fill: #0a3547; stroke: url(#fgrad); stroke-width: 2.5; }
+      .t1 { font-family: Verdana, sans-serif; font-size: 24; font-weight: bold; fill: #e6fbff; }
+      .t2 { font-family: Verdana, sans-serif; font-size: 15; fill: #8fb8c4; }
+    </style>
+  </defs>
+  <rect width="1200" height="230" rx="14" fill="#04202b"/>
+  <g stroke="#2dd4bf" stroke-width="3" fill="none" class="dash">
+    <line x1="270" y1="105" x2="318" y2="105"/>
+    <line x1="560" y1="105" x2="608" y2="105"/>
+    <line x1="850" y1="105" x2="898" y2="105"/>
+  </g>
+  <g fill="#2dd4bf">
+    <path d="M 318 105 L 304 96 L 304 114 Z"/>
+    <path d="M 608 105 L 594 96 L 594 114 Z"/>
+    <path d="M 898 105 L 884 96 L 884 114 Z"/>
+  </g>
+  <circle r="6" fill="#a5f3fc">
+    <animateMotion dur="5.6s" repeatCount="indefinite" path="M 60 105 L 1140 105"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="5.6s" repeatCount="indefinite"/>
+  </circle>
+  <g>
+    <rect class="box" x="40" y="55" width="230" height="100" rx="14"/>
+    <text class="t1" x="155" y="100" text-anchor="middle">1 · WATCH</text>
+    <text class="t2" x="155" y="130" text-anchor="middle">fetch + clean the page</text>
+  </g>
+  <g>
+    <rect class="box" x="330" y="55" width="230" height="100" rx="14"/>
+    <text class="t1" x="445" y="100" text-anchor="middle">2 · SNAPSHOT</text>
+    <text class="t2" x="445" y="130" text-anchor="middle">noise filtered, secrets out</text>
+  </g>
+  <g>
+    <rect class="box" x="620" y="55" width="230" height="100" rx="14"/>
+    <text class="t1" x="735" y="100" text-anchor="middle">3 · CHECK</text>
+    <text class="t2" x="735" y="130" text-anchor="middle">diff old vs new lines</text>
+  </g>
+  <g>
+    <rect class="box" x="910" y="55" width="230" height="100" rx="14"/>
+    <text class="t1" x="1025" y="100" text-anchor="middle">4 · REPORT</text>
+    <text class="t2" x="1025" y="130" text-anchor="middle">+ added  − removed  ~ changed</text>
+  </g>
+  <text x="600" y="200" text-anchor="middle" font-family="Verdana, sans-serif" font-size="16" fill="#67e8f9">exit 0 = NO CHANGE · exit 1 = CHANGED · exit 2 = ERROR</text>
+</svg>
